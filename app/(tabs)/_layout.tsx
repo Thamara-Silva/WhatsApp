@@ -12,6 +12,8 @@ export default function RootLayout() {
                 headerTintColor: "white",
                 tabBarStyle: {
                     backgroundColor: "#202C33",
+                    height: 60,
+                    marginTop: 2,
                 },
                 tabBarActiveTintColor: "#25D366",
 
