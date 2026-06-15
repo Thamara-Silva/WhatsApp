@@ -8,13 +8,18 @@ export default function RootLayout() {
             screenOptions={{
                 headerStyle: {
                     backgroundColor: "#202C33",
+                    borderBottomWidth: 0,
+                    elevation: 0,
                 },
-                headerTintColor: "white",
+
+
                 tabBarStyle: {
                     backgroundColor: "#202C33",
                     height: 60,
-                    marginTop: 2,
+                    borderTopWidth: 0,
+                    elevation: 0,
                 },
+
                 tabBarActiveTintColor: "#25D366",
 
                 tabBarInactiveTintColor: "#8696A0",
@@ -30,7 +35,6 @@ export default function RootLayout() {
                         <TouchableOpacity style={{ marginHorizontal: 10 }}>
                             <Ionicons name="search" size={24} color="white" />
                         </TouchableOpacity>
-
                         <TouchableOpacity>
                             <Ionicons name="ellipsis-vertical" size={24} color="white" />
                         </TouchableOpacity>
@@ -38,6 +42,9 @@ export default function RootLayout() {
                 ),
             }}
         >
+
+
+
             <Tabs.Screen
                 name="index"
                 options={{

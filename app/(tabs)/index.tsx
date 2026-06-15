@@ -1,12 +1,48 @@
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, TouchableOpacity , Image} from "react-native";
 
 export default function Index() {
     return (
+
+
+
+
         <View style={styles.container}>
+
+            <View style={styles.filtros}>
+
+
+                <TouchableOpacity style={[styles.filtro, styles.filtroAtivo]}    >
+                    <Text style={[styles.textoFiltro, styles.filtroAtivo]}>
+                        Todas
+                    </Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.filtro}>
+                    <Text style={styles.textoFiltro}>
+                        Não lidas 2
+                    </Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.filtro}>
+                    <Text style={styles.textoFiltro}>
+                        Favoritos
+                    </Text>
+                </TouchableOpacity>
+
+
+                <TouchableOpacity style={styles.filtro}>
+                    <Text style={styles.textoFiltro}>
+                        Grupos 3
+                    </Text>
+                </TouchableOpacity>
+
+
+
+            </View>
 
 
             <View style={styles.conversa}>
-                <View style={styles.foto} />
+                <Image source={require("../../assets/nicole.jpg")} style={styles.foto} />
 
                 <View style={styles.info}>
                     <Text style={styles.nome}>Nicole</Text>
@@ -17,7 +53,7 @@ export default function Index() {
 
 
             <View style={styles.conversa}>
-                <View style={styles.foto} />
+                <Image source={require("../../assets/julia.jpg")} style={styles.foto} />
 
                 <View style={styles.info}>
                     <Text style={styles.nome}>Julia</Text>
@@ -28,7 +64,7 @@ export default function Index() {
 
 
             <View style={styles.conversa}>
-                <View style={styles.foto} />
+                <Image source={require("../../assets/gabi.jpg")} style={styles.foto} />
 
                 <View style={styles.info}>
                     <Text style={styles.nome}>Gabi</Text>
@@ -49,14 +85,47 @@ const styles = StyleSheet.create({
         backgroundColor: "#111B21",
     },
 
+    filtros: {
+        flexDirection: "row",
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        height: 35,
+        alignItems: "center",
+        gap: 10,
+    },
+
+    filtro: {
+        paddingVertical: 8,
+        paddingHorizontal: 14,
+        backgroundColor: "#3841467c",
+        borderWidth: 1,
+        borderColor: "#384146",
+        borderRadius: 20,
+    },
+
+    filtroAtivo: {
+        backgroundColor: "#204b30bd",
+        borderColor: "#919191",
+        color: "white",
+        borderRadius: 20,
+        fontSize: 14,
+
+    },
+
+    textoFiltro: {
+        color: "#bebebe",
+        fontSize: 13,
+        fontWeight: "500",
+    },
+
     conversa: {
         padding: 15,
         borderBottomWidth: 1,
         borderBottomColor: "#384146",
         flexDirection: "row",
         alignItems: "center",
-        cursor:"pointer",
-        
+        cursor: "pointer",
+
     },
 
     nome: {
@@ -86,7 +155,6 @@ const styles = StyleSheet.create({
         width: 50,
         height: 50,
         borderRadius: 25,
-        backgroundColor: "#ccc",
         marginRight: 12,
     }
 });
