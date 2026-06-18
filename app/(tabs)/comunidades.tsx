@@ -1,33 +1,33 @@
-import { StyleSheet, View, Text } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export default function Index() {
     return (
         <View style={styles.container}>
 
-            <View style={styles.conversa}>
-                <View style={styles.foto} />
+            <TouchableOpacity style={styles.conversa}>
+                <Image source={require("../../assets/gatosfilhotes.jpg")} style={styles.foto} />
 
                 <View>
                     <Text style={styles.nome}>Nova Comunidade</Text>
                 </View>
-            </View>
+            </TouchableOpacity>
 
-            <View style={styles.conversa}>
-                <View style={styles.foto} />
+            <TouchableOpacity style={styles.conversa}>
+                <Image source={require("../../assets/silencio.png")} style={styles.foto} />
                 <View>
                     <Text style={styles.nome}>Avisos Etec</Text>
                     <Text style={styles.mensagem}>Informações para amanhã...</Text>
                 </View>
-            </View>
+            </TouchableOpacity>
 
-            <View style={styles.conversa}>
-                <View style={styles.foto} />
+            <TouchableOpacity style={styles.conversa}>
+                <Image source={require("../../assets/familia.png")} style={styles.foto} />
 
                 <View>
                     <Text style={styles.nome}>Família Silva</Text>
                     <Text style={styles.mensagem}>Tia Neide, a senhora não pode acreditar em tudo que vê na intern...</Text>
                 </View>
-            </View>
+            </TouchableOpacity>
 
             <Text style={styles.msg}> -  Ver todos</Text>
 

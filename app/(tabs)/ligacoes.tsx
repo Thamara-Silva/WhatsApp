@@ -1,20 +1,24 @@
-import { StyleSheet, View, Text } from "react-native";
+import Feather from '@expo/vector-icons/Feather';
+import { Image, StyleSheet, Text, View, } from "react-native";
+
 
 export default function Index() {
     return (
         <View style={styles.container}>
 
             <View style={styles.ligacao}>
-                <View style={styles.foto} />
+                <Image source={require("../../assets/nicole.jpg")} style={styles.foto} />
 
                 <View>
                     <Text style={styles.atendida}>Nicole</Text>
                     <Text style={styles.mensagem}>Hoje 15:00</Text>
-                </View>
+                    <Feather name="phone" style={styles.icon} />
+                </View>                    
+
             </View>
 
             <View style={styles.ligacao}>
-                <View style={styles.foto} />
+                <Image source={require("../../assets/julia.jpg")} style={styles.foto} />
                 <View>
                     <Text style={styles.perdida}>Julia</Text>
                     <Text style={styles.mensagem}>Ontem 19:00</Text>
@@ -22,7 +26,7 @@ export default function Index() {
             </View>
 
             <View style={styles.ligacao}>
-                <View style={styles.foto} />
+                <Image source={require("../../assets/gabi.jpg")} style={styles.foto} />
 
                 <View>
                     <Text style={styles.atendida}>Gabi</Text>
@@ -75,5 +79,10 @@ const styles = StyleSheet.create({
         borderRadius: 25,
         backgroundColor: "#ccc",
         marginRight: 12,
-    }
+    },
+
+    icon: {
+        fontSize: 20,
+        color: "#d2d2d2",
+    },
 });

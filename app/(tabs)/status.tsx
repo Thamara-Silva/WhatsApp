@@ -1,48 +1,46 @@
-import { StyleSheet, View, Text } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export default function Index() {
     return (
         <View style={styles.container}>
 
 
-            <View style={styles.status_eu}>
-                <View style={styles.foto} />
+            <TouchableOpacity style={styles.status_eu}>
+                <Image source={require("../../assets/nicole.jpg")} style={styles.foto} />
 
                 <View>
                     <Text style={styles.nome}>Meu status</Text>
                     <Text style={styles.mensagem}>Toque para ver ou atualizar seu status</Text>
                 </View>
-            </View>
+            </TouchableOpacity>
 
 
 
 
-            <View style={styles.status}>
-                <View style={styles.foto} />
+            <TouchableOpacity style={styles.status}>
+                <Image source={require("../../assets/nicole.jpg")} style={styles.foto} />
 
                 <View>
                     <Text style={styles.nome}>Nicole</Text>
                     <Text style={styles.mensagem}>Agora mesmo</Text>
                 </View>
-            </View>
+            </TouchableOpacity>
 
-            <View style={styles.status}>
-                <View style={styles.foto} />
+            <TouchableOpacity style={styles.status}>
+                <Image source={require("../../assets/julia.jpg")} style={styles.foto} />
                 <View>
                     <Text style={styles.nome}>Julia</Text>
                     <Text style={styles.mensagem}>Há 15 segundos</Text>
                 </View>
-            </View>
+            </TouchableOpacity>
 
-            <View style={styles.status}>
-                <View style={styles.foto} />
-
+            <TouchableOpacity style={styles.status}>
+                <Image source={require("../../assets/gabi.jpg")} style={styles.foto} />
                 <View>
                     <Text style={styles.nome}>Gabi</Text>
                     <Text style={styles.mensagem}>Hoje às 14:45</Text>
-
                 </View>
-            </View>
+            </TouchableOpacity>
 
         </View>
     );
@@ -86,10 +84,7 @@ const styles = StyleSheet.create({
         width: 50,
         height: 50,
         borderRadius: 25,
-        backgroundColor: "#ccc",
         marginRight: 12,
-        borderWidth: 3,
-        borderColor: "#25D366",
     },
 
     mensagem: {

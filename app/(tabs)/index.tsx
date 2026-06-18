@@ -1,5 +1,4 @@
-import { StyleSheet, View, Text, TouchableOpacity , Image} from "react-native";
-
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 export default function Index() {
     return (
 
@@ -41,7 +40,7 @@ export default function Index() {
             </View>
 
 
-            <View style={styles.conversa}>
+            <TouchableOpacity style={styles.conversa}>
                 <Image source={require("../../assets/nicole.jpg")} style={styles.foto} />
 
                 <View style={styles.info}>
@@ -49,10 +48,10 @@ export default function Index() {
                     <Text style={styles.mensagem}>Ô bixa</Text>
                 </View>
                 <Text style={styles.hrs}>14:45</Text>
-            </View>
+            </TouchableOpacity>
 
 
-            <View style={styles.conversa}>
+            <TouchableOpacity style={styles.conversa}>
                 <Image source={require("../../assets/julia.jpg")} style={styles.foto} />
 
                 <View style={styles.info}>
@@ -60,10 +59,10 @@ export default function Index() {
                     <Text style={styles.mensagem}>O escorbuto</Text>
                 </View>
                 <Text style={styles.hrs}>16:00</Text>
-            </View>
+            </TouchableOpacity>
 
 
-            <View style={styles.conversa}>
+            <TouchableOpacity style={styles.conversa}>
                 <Image source={require("../../assets/gabi.jpg")} style={styles.foto} />
 
                 <View style={styles.info}>
@@ -71,7 +70,7 @@ export default function Index() {
                     <Text style={styles.mensagem}>:)</Text>
                 </View>
                 <Text style={styles.hrs}>19:00</Text>
-            </View>
+            </TouchableOpacity>
 
 
         </View>
